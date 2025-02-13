@@ -1197,3 +1197,318 @@
 2025-02-05 09:45:25.277 | ERROR    | __main__:consume_messages_from_kafka:148 - ERROR: Could not consume messages from Kafka: Invalid file descriptor: -1
 2025-02-05 09:45:25.277 | ERROR    | __main__:main:203 - Unexpected error: Invalid file descriptor: -1
 2025-02-05 09:45:25.278 | INFO     | __main__:main:205 - Consumer shutting down.
+2025-02-12 22:09:51.853 | INFO     | utils.utils_logger:<module>:43 - Logging to file: logs\project_log.log
+2025-02-12 22:10:13.620 | INFO     | utils.utils_logger:<module>:43 - Logging to file: logs\project_log.log
+2025-02-12 22:10:13.622 | INFO     | __main__:main:125 - Starting Producer to run continuously.
+2025-02-12 22:10:13.622 | INFO     | __main__:main:126 - Things can fail or get interrupted, so use a try block.
+2025-02-12 22:10:13.622 | INFO     | __main__:main:127 - Moved .env variables into a utils config module.
+2025-02-12 22:10:13.622 | INFO     | __main__:main:129 - STEP 1. Read required environment variables.
+2025-02-12 22:10:13.623 | INFO     | utils.utils_config:get_message_interval_seconds_as_int:65 - MESSAGE_INTERVAL_SECONDS: 5
+2025-02-12 22:10:13.623 | INFO     | utils.utils_config:get_kafka_topic:58 - BUZZ_TOPIC: buzzline
+2025-02-12 22:10:13.623 | INFO     | utils.utils_config:get_kafka_broker_address:51 - KAFKA_BROKER_ADDRESS: 127.0.0.1:9092
+2025-02-12 22:10:13.624 | INFO     | utils.utils_config:get_base_data_path:80 - BASE_DATA_DIR: C:\Users\mvang\Streaming_Data_Projects\buzzline-05-mee\data
+2025-02-12 22:10:13.624 | INFO     | utils.utils_config:get_live_data_path:89 - LIVE_DATA_PATH: C:\Users\mvang\Streaming_Data_Projects\buzzline-05-mee\data\project_live.json
+2025-02-12 22:10:13.624 | INFO     | __main__:main:140 - STEP 2. Delete the live data file if exists to start fresh.
+2025-02-12 22:10:13.625 | INFO     | __main__:main:145 - Deleted existing live data file.
+2025-02-12 22:10:13.625 | INFO     | __main__:main:147 - STEP 3. Build the path folders to the live data file if needed.
+2025-02-12 22:10:13.626 | INFO     | __main__:main:153 - STEP 4. Try to create a Kafka producer and topic.
+2025-02-12 22:10:13.626 | INFO     | utils.utils_config:get_zookeeper_address:44 - ZOOKEEPER_ADDRESS: 127.0.0.1:2181
+2025-02-12 22:10:15.690 | ERROR    | utils.utils_producer:check_zookeeper_service_is_ready:50 - Error checking Zookeeper readiness: [WinError 10061] No connection could be made because the target machine actively refused it
+2025-02-12 22:10:15.691 | ERROR    | utils.utils_producer:verify_services:82 - Zookeeper is not ready. Please check your Zookeeper setup. Exiting...
+2025-02-12 22:12:23.428 | INFO     | utils.utils_logger:<module>:43 - Logging to file: logs\project_log.log
+2025-02-12 22:12:23.429 | INFO     | __main__:main:125 - Starting Producer to run continuously.
+2025-02-12 22:12:23.430 | INFO     | __main__:main:126 - Things can fail or get interrupted, so use a try block.
+2025-02-12 22:12:23.430 | INFO     | __main__:main:127 - Moved .env variables into a utils config module.
+2025-02-12 22:12:23.430 | INFO     | __main__:main:129 - STEP 1. Read required environment variables.
+2025-02-12 22:12:23.431 | INFO     | utils.utils_config:get_message_interval_seconds_as_int:65 - MESSAGE_INTERVAL_SECONDS: 5
+2025-02-12 22:12:23.431 | INFO     | utils.utils_config:get_kafka_topic:58 - BUZZ_TOPIC: buzzline
+2025-02-12 22:12:23.432 | INFO     | utils.utils_config:get_kafka_broker_address:51 - KAFKA_BROKER_ADDRESS: 127.0.0.1:9092
+2025-02-12 22:12:23.432 | INFO     | utils.utils_config:get_base_data_path:80 - BASE_DATA_DIR: C:\Users\mvang\Streaming_Data_Projects\buzzline-05-mee\data
+2025-02-12 22:12:23.433 | INFO     | utils.utils_config:get_live_data_path:89 - LIVE_DATA_PATH: C:\Users\mvang\Streaming_Data_Projects\buzzline-05-mee\data\project_live.json
+2025-02-12 22:12:23.433 | INFO     | __main__:main:140 - STEP 2. Delete the live data file if exists to start fresh.
+2025-02-12 22:12:23.433 | INFO     | __main__:main:147 - STEP 3. Build the path folders to the live data file if needed.
+2025-02-12 22:12:23.434 | INFO     | __main__:main:153 - STEP 4. Try to create a Kafka producer and topic.
+2025-02-12 22:12:23.434 | INFO     | utils.utils_config:get_zookeeper_address:44 - ZOOKEEPER_ADDRESS: 127.0.0.1:2181
+2025-02-12 22:12:25.507 | ERROR    | utils.utils_producer:check_zookeeper_service_is_ready:50 - Error checking Zookeeper readiness: [WinError 10061] No connection could be made because the target machine actively refused it
+2025-02-12 22:12:25.508 | ERROR    | utils.utils_producer:verify_services:82 - Zookeeper is not ready. Please check your Zookeeper setup. Exiting...
+2025-02-12 22:13:38.787 | INFO     | utils.utils_logger:<module>:43 - Logging to file: logs\project_log.log
+2025-02-12 22:13:38.789 | INFO     | __main__:main:125 - Starting Producer to run continuously.
+2025-02-12 22:13:38.789 | INFO     | __main__:main:126 - Things can fail or get interrupted, so use a try block.
+2025-02-12 22:13:38.789 | INFO     | __main__:main:127 - Moved .env variables into a utils config module.
+2025-02-12 22:13:38.790 | INFO     | __main__:main:129 - STEP 1. Read required environment variables.
+2025-02-12 22:13:38.790 | INFO     | utils.utils_config:get_message_interval_seconds_as_int:65 - MESSAGE_INTERVAL_SECONDS: 5
+2025-02-12 22:13:38.790 | INFO     | utils.utils_config:get_kafka_topic:58 - BUZZ_TOPIC: buzzline
+2025-02-12 22:13:38.791 | INFO     | utils.utils_config:get_kafka_broker_address:51 - KAFKA_BROKER_ADDRESS: 127.0.0.1:9092
+2025-02-12 22:13:38.791 | INFO     | utils.utils_config:get_base_data_path:80 - BASE_DATA_DIR: C:\Users\mvang\Streaming_Data_Projects\buzzline-05-mee\data
+2025-02-12 22:13:38.791 | INFO     | utils.utils_config:get_live_data_path:89 - LIVE_DATA_PATH: C:\Users\mvang\Streaming_Data_Projects\buzzline-05-mee\data\project_live.json
+2025-02-12 22:13:38.792 | INFO     | __main__:main:140 - STEP 2. Delete the live data file if exists to start fresh.
+2025-02-12 22:13:38.792 | INFO     | __main__:main:147 - STEP 3. Build the path folders to the live data file if needed.
+2025-02-12 22:13:38.792 | INFO     | __main__:main:153 - STEP 4. Try to create a Kafka producer and topic.
+2025-02-12 22:13:38.793 | INFO     | utils.utils_config:get_zookeeper_address:44 - ZOOKEEPER_ADDRESS: 127.0.0.1:2181
+2025-02-12 22:13:40.853 | ERROR    | utils.utils_producer:check_zookeeper_service_is_ready:50 - Error checking Zookeeper readiness: [WinError 10061] No connection could be made because the target machine actively refused it
+2025-02-12 22:13:40.855 | ERROR    | utils.utils_producer:verify_services:82 - Zookeeper is not ready. Please check your Zookeeper setup. Exiting...
+2025-02-12 22:13:57.739 | INFO     | utils.utils_logger:<module>:43 - Logging to file: logs\project_log.log
+2025-02-12 22:13:57.740 | INFO     | __main__:main:125 - Starting Producer to run continuously.
+2025-02-12 22:13:57.741 | INFO     | __main__:main:126 - Things can fail or get interrupted, so use a try block.
+2025-02-12 22:13:57.741 | INFO     | __main__:main:127 - Moved .env variables into a utils config module.
+2025-02-12 22:13:57.742 | INFO     | __main__:main:129 - STEP 1. Read required environment variables.
+2025-02-12 22:13:57.742 | INFO     | utils.utils_config:get_message_interval_seconds_as_int:65 - MESSAGE_INTERVAL_SECONDS: 5
+2025-02-12 22:13:57.742 | INFO     | utils.utils_config:get_kafka_topic:58 - BUZZ_TOPIC: buzzline
+2025-02-12 22:13:57.744 | INFO     | utils.utils_config:get_kafka_broker_address:51 - KAFKA_BROKER_ADDRESS: 127.0.0.1:9092
+2025-02-12 22:13:57.744 | INFO     | utils.utils_config:get_base_data_path:80 - BASE_DATA_DIR: C:\Users\mvang\Streaming_Data_Projects\buzzline-05-mee\data
+2025-02-12 22:13:57.744 | INFO     | utils.utils_config:get_live_data_path:89 - LIVE_DATA_PATH: C:\Users\mvang\Streaming_Data_Projects\buzzline-05-mee\data\project_live.json
+2025-02-12 22:13:57.744 | INFO     | __main__:main:140 - STEP 2. Delete the live data file if exists to start fresh.
+2025-02-12 22:13:57.744 | INFO     | __main__:main:147 - STEP 3. Build the path folders to the live data file if needed.
+2025-02-12 22:13:57.745 | INFO     | __main__:main:153 - STEP 4. Try to create a Kafka producer and topic.
+2025-02-12 22:13:57.745 | INFO     | utils.utils_config:get_zookeeper_address:44 - ZOOKEEPER_ADDRESS: 127.0.0.1:2181
+2025-02-12 22:13:59.792 | ERROR    | utils.utils_producer:check_zookeeper_service_is_ready:50 - Error checking Zookeeper readiness: [WinError 10061] No connection could be made because the target machine actively refused it
+2025-02-12 22:13:59.793 | ERROR    | utils.utils_producer:verify_services:82 - Zookeeper is not ready. Please check your Zookeeper setup. Exiting...
+2025-02-12 22:16:23.013 | INFO     | utils.utils_logger:<module>:43 - Logging to file: logs\project_log.log
+2025-02-12 22:16:23.015 | INFO     | __main__:main:125 - Starting Producer to run continuously.
+2025-02-12 22:16:23.015 | INFO     | __main__:main:126 - Things can fail or get interrupted, so use a try block.
+2025-02-12 22:16:23.016 | INFO     | __main__:main:127 - Moved .env variables into a utils config module.
+2025-02-12 22:16:23.016 | INFO     | __main__:main:129 - STEP 1. Read required environment variables.
+2025-02-12 22:16:23.016 | INFO     | utils.utils_config:get_message_interval_seconds_as_int:65 - MESSAGE_INTERVAL_SECONDS: 5
+2025-02-12 22:16:23.017 | INFO     | utils.utils_config:get_kafka_topic:58 - BUZZ_TOPIC: buzzline
+2025-02-12 22:16:23.017 | INFO     | utils.utils_config:get_kafka_broker_address:51 - KAFKA_BROKER_ADDRESS: 127.0.0.1:9092
+2025-02-12 22:16:23.018 | INFO     | utils.utils_config:get_base_data_path:80 - BASE_DATA_DIR: C:\Users\mvang\Streaming_Data_Projects\buzzline-05-mee\data
+2025-02-12 22:16:23.018 | INFO     | utils.utils_config:get_live_data_path:89 - LIVE_DATA_PATH: C:\Users\mvang\Streaming_Data_Projects\buzzline-05-mee\data\project_live.json
+2025-02-12 22:16:23.018 | INFO     | __main__:main:140 - STEP 2. Delete the live data file if exists to start fresh.
+2025-02-12 22:16:23.018 | INFO     | __main__:main:147 - STEP 3. Build the path folders to the live data file if needed.
+2025-02-12 22:16:23.019 | INFO     | __main__:main:153 - STEP 4. Try to create a Kafka producer and topic.
+2025-02-12 22:16:23.019 | INFO     | utils.utils_config:get_zookeeper_address:44 - ZOOKEEPER_ADDRESS: 127.0.0.1:2181
+2025-02-12 22:16:25.054 | ERROR    | utils.utils_producer:check_zookeeper_service_is_ready:50 - Error checking Zookeeper readiness: [WinError 10061] No connection could be made because the target machine actively refused it
+2025-02-12 22:16:25.055 | ERROR    | utils.utils_producer:verify_services:82 - Zookeeper is not ready. Please check your Zookeeper setup. Exiting...
+2025-02-12 22:17:14.463 | INFO     | utils.utils_logger:<module>:43 - Logging to file: logs\project_log.log
+2025-02-12 22:17:14.464 | INFO     | __main__:main:125 - Starting Producer to run continuously.
+2025-02-12 22:17:14.464 | INFO     | __main__:main:126 - Things can fail or get interrupted, so use a try block.
+2025-02-12 22:17:14.464 | INFO     | __main__:main:127 - Moved .env variables into a utils config module.
+2025-02-12 22:17:14.464 | INFO     | __main__:main:129 - STEP 1. Read required environment variables.
+2025-02-12 22:17:14.464 | INFO     | utils.utils_config:get_message_interval_seconds_as_int:65 - MESSAGE_INTERVAL_SECONDS: 5
+2025-02-12 22:17:14.464 | INFO     | utils.utils_config:get_kafka_topic:58 - BUZZ_TOPIC: buzzline
+2025-02-12 22:17:14.464 | INFO     | utils.utils_config:get_kafka_broker_address:51 - KAFKA_BROKER_ADDRESS: 127.0.0.1:9092
+2025-02-12 22:17:14.464 | INFO     | utils.utils_config:get_base_data_path:80 - BASE_DATA_DIR: C:\Users\mvang\Streaming_Data_Projects\buzzline-05-mee\data
+2025-02-12 22:17:14.464 | INFO     | utils.utils_config:get_live_data_path:89 - LIVE_DATA_PATH: C:\Users\mvang\Streaming_Data_Projects\buzzline-05-mee\data\project_live.json
+2025-02-12 22:17:14.465 | INFO     | __main__:main:140 - STEP 2. Delete the live data file if exists to start fresh.
+2025-02-12 22:17:14.465 | INFO     | __main__:main:147 - STEP 3. Build the path folders to the live data file if needed.
+2025-02-12 22:17:14.465 | INFO     | __main__:main:153 - STEP 4. Try to create a Kafka producer and topic.
+2025-02-12 22:17:14.466 | INFO     | utils.utils_config:get_zookeeper_address:44 - ZOOKEEPER_ADDRESS: 127.0.0.1:2181
+2025-02-12 22:17:16.491 | ERROR    | utils.utils_producer:check_zookeeper_service_is_ready:50 - Error checking Zookeeper readiness: [WinError 10061] No connection could be made because the target machine actively refused it
+2025-02-12 22:17:16.492 | ERROR    | utils.utils_producer:verify_services:82 - Zookeeper is not ready. Please check your Zookeeper setup. Exiting...
+2025-02-12 22:19:23.930 | INFO     | utils.utils_logger:<module>:43 - Logging to file: logs\project_log.log
+2025-02-12 22:19:23.933 | INFO     | __main__:main:125 - Starting Producer to run continuously.
+2025-02-12 22:19:23.933 | INFO     | __main__:main:126 - Things can fail or get interrupted, so use a try block.
+2025-02-12 22:19:23.933 | INFO     | __main__:main:127 - Moved .env variables into a utils config module.
+2025-02-12 22:19:23.933 | INFO     | __main__:main:129 - STEP 1. Read required environment variables.
+2025-02-12 22:19:23.934 | INFO     | utils.utils_config:get_message_interval_seconds_as_int:65 - MESSAGE_INTERVAL_SECONDS: 5
+2025-02-12 22:19:23.934 | INFO     | utils.utils_config:get_kafka_topic:58 - BUZZ_TOPIC: buzzline
+2025-02-12 22:19:23.934 | INFO     | utils.utils_config:get_kafka_broker_address:51 - KAFKA_BROKER_ADDRESS: 127.0.0.1:9092
+2025-02-12 22:19:23.934 | INFO     | utils.utils_config:get_base_data_path:80 - BASE_DATA_DIR: C:\Users\mvang\Streaming_Data_Projects\buzzline-05-mee\data
+2025-02-12 22:19:23.934 | INFO     | utils.utils_config:get_live_data_path:89 - LIVE_DATA_PATH: C:\Users\mvang\Streaming_Data_Projects\buzzline-05-mee\data\project_live.json
+2025-02-12 22:19:23.934 | INFO     | __main__:main:140 - STEP 2. Delete the live data file if exists to start fresh.
+2025-02-12 22:19:23.935 | INFO     | __main__:main:147 - STEP 3. Build the path folders to the live data file if needed.
+2025-02-12 22:19:23.935 | INFO     | __main__:main:153 - STEP 4. Try to create a Kafka producer and topic.
+2025-02-12 22:19:23.935 | INFO     | utils.utils_config:get_zookeeper_address:44 - ZOOKEEPER_ADDRESS: 127.0.0.1:2181
+2025-02-12 22:19:25.988 | ERROR    | utils.utils_producer:check_zookeeper_service_is_ready:50 - Error checking Zookeeper readiness: [WinError 10061] No connection could be made because the target machine actively refused it
+2025-02-12 22:19:25.989 | ERROR    | utils.utils_producer:verify_services:82 - Zookeeper is not ready. Please check your Zookeeper setup. Exiting...
+2025-02-12 22:23:44.065 | INFO     | utils.utils_logger:<module>:43 - Logging to file: logs\project_log.log
+2025-02-12 22:23:44.066 | INFO     | __main__:main:125 - Starting Producer to run continuously.
+2025-02-12 22:23:44.066 | INFO     | __main__:main:126 - Things can fail or get interrupted, so use a try block.
+2025-02-12 22:23:44.066 | INFO     | __main__:main:127 - Moved .env variables into a utils config module.
+2025-02-12 22:23:44.066 | INFO     | __main__:main:129 - STEP 1. Read required environment variables.
+2025-02-12 22:23:44.067 | INFO     | utils.utils_config:get_message_interval_seconds_as_int:65 - MESSAGE_INTERVAL_SECONDS: 5
+2025-02-12 22:23:44.067 | INFO     | utils.utils_config:get_kafka_topic:58 - BUZZ_TOPIC: buzzline
+2025-02-12 22:23:44.067 | INFO     | utils.utils_config:get_kafka_broker_address:51 - KAFKA_BROKER_ADDRESS: 127.0.0.1:9092
+2025-02-12 22:23:44.067 | INFO     | utils.utils_config:get_base_data_path:80 - BASE_DATA_DIR: C:\Users\mvang\Streaming_Data_Projects\buzzline-05-mee\data
+2025-02-12 22:23:44.067 | INFO     | utils.utils_config:get_live_data_path:89 - LIVE_DATA_PATH: C:\Users\mvang\Streaming_Data_Projects\buzzline-05-mee\data\project_live.json
+2025-02-12 22:23:44.067 | INFO     | __main__:main:140 - STEP 2. Delete the live data file if exists to start fresh.
+2025-02-12 22:23:44.068 | INFO     | __main__:main:147 - STEP 3. Build the path folders to the live data file if needed.
+2025-02-12 22:23:44.068 | INFO     | __main__:main:153 - STEP 4. Try to create a Kafka producer and topic.
+2025-02-12 22:23:44.068 | INFO     | utils.utils_config:get_zookeeper_address:44 - ZOOKEEPER_ADDRESS: 127.0.0.1:2181
+2025-02-12 22:23:46.104 | ERROR    | utils.utils_producer:check_zookeeper_service_is_ready:50 - Error checking Zookeeper readiness: [WinError 10061] No connection could be made because the target machine actively refused it
+2025-02-12 22:23:46.106 | ERROR    | utils.utils_producer:verify_services:82 - Zookeeper is not ready. Please check your Zookeeper setup. Exiting...
+2025-02-12 22:25:43.358 | INFO     | utils.utils_logger:<module>:43 - Logging to file: logs\project_log.log
+2025-02-12 22:25:43.361 | INFO     | __main__:main:125 - Starting Producer to run continuously.
+2025-02-12 22:25:43.361 | INFO     | __main__:main:126 - Things can fail or get interrupted, so use a try block.
+2025-02-12 22:25:43.361 | INFO     | __main__:main:127 - Moved .env variables into a utils config module.
+2025-02-12 22:25:43.362 | INFO     | __main__:main:129 - STEP 1. Read required environment variables.
+2025-02-12 22:25:43.362 | INFO     | utils.utils_config:get_message_interval_seconds_as_int:65 - MESSAGE_INTERVAL_SECONDS: 5
+2025-02-12 22:25:43.362 | INFO     | utils.utils_config:get_kafka_topic:58 - BUZZ_TOPIC: buzzline
+2025-02-12 22:25:43.362 | INFO     | utils.utils_config:get_kafka_broker_address:51 - KAFKA_BROKER_ADDRESS: 127.0.0.1:9092
+2025-02-12 22:25:43.362 | INFO     | utils.utils_config:get_base_data_path:80 - BASE_DATA_DIR: C:\Users\mvang\Streaming_Data_Projects\buzzline-05-mee\data
+2025-02-12 22:25:43.363 | INFO     | utils.utils_config:get_live_data_path:89 - LIVE_DATA_PATH: C:\Users\mvang\Streaming_Data_Projects\buzzline-05-mee\data\project_live.json
+2025-02-12 22:25:43.363 | INFO     | __main__:main:140 - STEP 2. Delete the live data file if exists to start fresh.
+2025-02-12 22:25:43.363 | INFO     | __main__:main:147 - STEP 3. Build the path folders to the live data file if needed.
+2025-02-12 22:25:43.363 | INFO     | __main__:main:153 - STEP 4. Try to create a Kafka producer and topic.
+2025-02-12 22:25:43.364 | INFO     | utils.utils_config:get_zookeeper_address:44 - ZOOKEEPER_ADDRESS: 127.0.0.1:2181
+2025-02-12 22:25:45.398 | ERROR    | utils.utils_producer:check_zookeeper_service_is_ready:50 - Error checking Zookeeper readiness: [WinError 10061] No connection could be made because the target machine actively refused it
+2025-02-12 22:25:45.399 | ERROR    | utils.utils_producer:verify_services:82 - Zookeeper is not ready. Please check your Zookeeper setup. Exiting...
+2025-02-12 22:34:02.241 | INFO     | utils.utils_logger:<module>:43 - Logging to file: logs\project_log.log
+2025-02-12 22:34:02.242 | INFO     | __main__:main:125 - Starting Producer to run continuously.
+2025-02-12 22:34:02.243 | INFO     | __main__:main:126 - Things can fail or get interrupted, so use a try block.
+2025-02-12 22:34:02.243 | INFO     | __main__:main:127 - Moved .env variables into a utils config module.
+2025-02-12 22:34:02.243 | INFO     | __main__:main:129 - STEP 1. Read required environment variables.
+2025-02-12 22:34:02.244 | INFO     | utils.utils_config:get_message_interval_seconds_as_int:65 - MESSAGE_INTERVAL_SECONDS: 5
+2025-02-12 22:34:02.244 | INFO     | utils.utils_config:get_kafka_topic:58 - BUZZ_TOPIC: buzzline
+2025-02-12 22:34:02.244 | INFO     | utils.utils_config:get_kafka_broker_address:51 - KAFKA_BROKER_ADDRESS: 127.0.0.1:9092
+2025-02-12 22:34:02.244 | INFO     | utils.utils_config:get_base_data_path:80 - BASE_DATA_DIR: C:\Users\mvang\Streaming_Data_Projects\buzzline-05-mee\data
+2025-02-12 22:34:02.244 | INFO     | utils.utils_config:get_live_data_path:89 - LIVE_DATA_PATH: C:\Users\mvang\Streaming_Data_Projects\buzzline-05-mee\data\project_live.json
+2025-02-12 22:34:02.246 | INFO     | __main__:main:140 - STEP 2. Delete the live data file if exists to start fresh.
+2025-02-12 22:34:02.246 | INFO     | __main__:main:147 - STEP 3. Build the path folders to the live data file if needed.
+2025-02-12 22:34:02.246 | INFO     | __main__:main:153 - STEP 4. Try to create a Kafka producer and topic.
+2025-02-12 22:34:02.247 | INFO     | utils.utils_config:get_zookeeper_address:44 - ZOOKEEPER_ADDRESS: 127.0.0.1:2181
+2025-02-12 22:34:04.286 | ERROR    | utils.utils_producer:check_zookeeper_service_is_ready:50 - Error checking Zookeeper readiness: [WinError 10061] No connection could be made because the target machine actively refused it
+2025-02-12 22:34:04.287 | ERROR    | utils.utils_producer:verify_services:82 - Zookeeper is not ready. Please check your Zookeeper setup. Exiting...
+2025-02-12 22:36:43.377 | INFO     | utils.utils_logger:<module>:43 - Logging to file: logs\project_log.log
+2025-02-12 22:36:43.378 | INFO     | utils.utils_config:get_zookeeper_address:44 - ZOOKEEPER_ADDRESS: 127.0.0.1:2181
+2025-02-12 22:36:45.410 | ERROR    | __main__:check_zookeeper_service_is_ready:50 - Error checking Zookeeper readiness: [WinError 10061] No connection could be made because the target machine actively refused it
+2025-02-12 22:36:45.412 | ERROR    | __main__:main:276 - Zookeeper is not ready. Check .env file and ensure Zookeeper is running.
+2025-02-12 22:39:35.089 | INFO     | utils.utils_logger:<module>:43 - Logging to file: logs\project_log.log
+2025-02-12 22:39:35.090 | INFO     | __main__:main:125 - Starting Producer to run continuously.
+2025-02-12 22:39:35.091 | INFO     | __main__:main:126 - Things can fail or get interrupted, so use a try block.
+2025-02-12 22:39:35.091 | INFO     | __main__:main:127 - Moved .env variables into a utils config module.
+2025-02-12 22:39:35.091 | INFO     | __main__:main:129 - STEP 1. Read required environment variables.
+2025-02-12 22:39:35.091 | INFO     | utils.utils_config:get_message_interval_seconds_as_int:65 - MESSAGE_INTERVAL_SECONDS: 5
+2025-02-12 22:39:35.091 | INFO     | utils.utils_config:get_kafka_topic:58 - BUZZ_TOPIC: buzzline
+2025-02-12 22:39:35.091 | INFO     | utils.utils_config:get_kafka_broker_address:51 - KAFKA_BROKER_ADDRESS: 127.0.0.1:9092
+2025-02-12 22:39:35.092 | INFO     | utils.utils_config:get_base_data_path:80 - BASE_DATA_DIR: C:\Users\mvang\Streaming_Data_Projects\buzzline-05-mee\data
+2025-02-12 22:39:35.092 | INFO     | utils.utils_config:get_live_data_path:89 - LIVE_DATA_PATH: C:\Users\mvang\Streaming_Data_Projects\buzzline-05-mee\data\project_live.json
+2025-02-12 22:39:35.092 | INFO     | __main__:main:140 - STEP 2. Delete the live data file if exists to start fresh.
+2025-02-12 22:39:35.092 | INFO     | __main__:main:147 - STEP 3. Build the path folders to the live data file if needed.
+2025-02-12 22:39:35.092 | INFO     | __main__:main:153 - STEP 4. Try to create a Kafka producer and topic.
+2025-02-12 22:39:35.093 | INFO     | utils.utils_config:get_zookeeper_address:44 - ZOOKEEPER_ADDRESS: 127.0.0.1:2181
+2025-02-12 22:39:37.168 | ERROR    | utils.utils_producer:check_zookeeper_service_is_ready:50 - Error checking Zookeeper readiness: [WinError 10061] No connection could be made because the target machine actively refused it
+2025-02-12 22:39:37.169 | ERROR    | utils.utils_producer:verify_services:82 - Zookeeper is not ready. Please check your Zookeeper setup. Exiting...
+2025-02-12 22:40:35.854 | INFO     | utils.utils_logger:<module>:43 - Logging to file: logs\project_log.log
+2025-02-12 22:40:35.855 | INFO     | __main__:main:125 - Starting Producer to run continuously.
+2025-02-12 22:40:35.855 | INFO     | __main__:main:126 - Things can fail or get interrupted, so use a try block.
+2025-02-12 22:40:35.855 | INFO     | __main__:main:127 - Moved .env variables into a utils config module.
+2025-02-12 22:40:35.855 | INFO     | __main__:main:129 - STEP 1. Read required environment variables.
+2025-02-12 22:40:35.855 | INFO     | utils.utils_config:get_message_interval_seconds_as_int:65 - MESSAGE_INTERVAL_SECONDS: 5
+2025-02-12 22:40:35.856 | INFO     | utils.utils_config:get_kafka_topic:58 - BUZZ_TOPIC: buzzline
+2025-02-12 22:40:35.856 | INFO     | utils.utils_config:get_kafka_broker_address:51 - KAFKA_BROKER_ADDRESS: 127.0.0.1:9092
+2025-02-12 22:40:35.856 | INFO     | utils.utils_config:get_base_data_path:80 - BASE_DATA_DIR: C:\Users\mvang\Streaming_Data_Projects\buzzline-05-mee\data
+2025-02-12 22:40:35.856 | INFO     | utils.utils_config:get_live_data_path:89 - LIVE_DATA_PATH: C:\Users\mvang\Streaming_Data_Projects\buzzline-05-mee\data\project_live.json
+2025-02-12 22:40:35.856 | INFO     | __main__:main:140 - STEP 2. Delete the live data file if exists to start fresh.
+2025-02-12 22:40:35.856 | INFO     | __main__:main:147 - STEP 3. Build the path folders to the live data file if needed.
+2025-02-12 22:40:35.857 | INFO     | __main__:main:153 - STEP 4. Try to create a Kafka producer and topic.
+2025-02-12 22:40:35.857 | INFO     | utils.utils_config:get_zookeeper_address:44 - ZOOKEEPER_ADDRESS: 127.0.0.1:2181
+2025-02-12 22:40:37.896 | ERROR    | utils.utils_producer:check_zookeeper_service_is_ready:50 - Error checking Zookeeper readiness: [WinError 10061] No connection could be made because the target machine actively refused it
+2025-02-12 22:40:37.898 | ERROR    | utils.utils_producer:verify_services:82 - Zookeeper is not ready. Please check your Zookeeper setup. Exiting...
+2025-02-12 22:47:33.055 | INFO     | utils.utils_logger:<module>:43 - Logging to file: logs\project_log.log
+2025-02-12 22:47:33.056 | INFO     | __main__:main:125 - Starting Producer to run continuously.
+2025-02-12 22:47:33.056 | INFO     | __main__:main:126 - Things can fail or get interrupted, so use a try block.
+2025-02-12 22:47:33.056 | INFO     | __main__:main:127 - Moved .env variables into a utils config module.
+2025-02-12 22:47:33.056 | INFO     | __main__:main:129 - STEP 1. Read required environment variables.
+2025-02-12 22:47:33.057 | INFO     | utils.utils_config:get_message_interval_seconds_as_int:65 - MESSAGE_INTERVAL_SECONDS: 5
+2025-02-12 22:47:33.057 | INFO     | utils.utils_config:get_kafka_topic:58 - BUZZ_TOPIC: buzzline
+2025-02-12 22:47:33.057 | INFO     | utils.utils_config:get_kafka_broker_address:51 - KAFKA_BROKER_ADDRESS: Localhost:9092
+2025-02-12 22:47:33.057 | INFO     | utils.utils_config:get_base_data_path:80 - BASE_DATA_DIR: C:\Users\mvang\Streaming_Data_Projects\buzzline-05-mee\data
+2025-02-12 22:47:33.057 | INFO     | utils.utils_config:get_live_data_path:89 - LIVE_DATA_PATH: C:\Users\mvang\Streaming_Data_Projects\buzzline-05-mee\data\project_live.json
+2025-02-12 22:47:33.058 | INFO     | __main__:main:140 - STEP 2. Delete the live data file if exists to start fresh.
+2025-02-12 22:47:33.058 | INFO     | __main__:main:147 - STEP 3. Build the path folders to the live data file if needed.
+2025-02-12 22:47:33.058 | INFO     | __main__:main:153 - STEP 4. Try to create a Kafka producer and topic.
+2025-02-12 22:47:33.059 | INFO     | utils.utils_config:get_zookeeper_address:44 - ZOOKEEPER_ADDRESS: Localhost:2181
+2025-02-12 22:47:33.068 | INFO     | utils.utils_producer:check_zookeeper_service_is_ready:47 - Zookeeper is ready at Localhost:2181.
+2025-02-12 22:47:33.069 | INFO     | utils.utils_config:get_kafka_broker_address:51 - KAFKA_BROKER_ADDRESS: Localhost:9092
+2025-02-12 22:47:33.404 | INFO     | utils.utils_producer:check_kafka_service_is_ready:66 - Kafka is ready. Brokers: {'throttle_time_ms': 0, 'brokers': [{'node_id': 0, 'host': 'localhost', 'port': 9092, 'rack': None}], 'cluster_id': '_G8XPam7RfiZtJ066MWexA', 'controller_id': 0}
+2025-02-12 22:47:33.514 | INFO     | __main__:main:162 - Kafka producer connected to Localhost:9092
+2025-02-12 22:47:33.515 | INFO     | utils.utils_config:get_kafka_broker_address:51 - KAFKA_BROKER_ADDRESS: Localhost:9092
+2025-02-12 22:47:33.848 | INFO     | utils.utils_producer:create_kafka_topic:150 - Topic 'buzzline' exists. Clearing it out...
+2025-02-12 22:47:33.849 | INFO     | utils.utils_config:get_kafka_broker_address:51 - KAFKA_BROKER_ADDRESS: Localhost:9092
+2025-02-12 22:47:34.194 | ERROR    | utils.utils_producer:clear_kafka_topic:226 - Error managing retention for topic 'buzzline': list indices must be integers or slices, not ConfigResource
+2025-02-12 22:47:34.196 | INFO     | __main__:main:170 - Kafka topic 'buzzline' is ready.
+2025-02-12 22:47:34.196 | INFO     | __main__:main:175 - STEP 5. Generate messages continuously.
+2025-02-12 22:47:34.196 | INFO     | __main__:main:178 - {'message': 'I just found JavaScript! It was exciting.', 'author': 'Bob', 'timestamp': '2025-02-12 22:47:34', 'category': 'tech', 'sentiment': 0.3, 'keyword_mentioned': 'JavaScript', 'message_length': 41}
+2025-02-12 22:47:34.198 | INFO     | __main__:main:182 - STEP 4a Wrote message to file: {'message': 'I just found JavaScript! It was exciting.', 'author': 'Bob', 'timestamp': '2025-02-12 22:47:34', 'category': 'tech', 'sentiment': 0.3, 'keyword_mentioned': 'JavaScript', 'message_length': 41}
+2025-02-12 22:47:34.199 | INFO     | __main__:main:187 - STEP 4b Sent message to Kafka topic 'buzzline': {'message': 'I just found JavaScript! It was exciting.', 'author': 'Bob', 'timestamp': '2025-02-12 22:47:34', 'category': 'tech', 'sentiment': 0.3, 'keyword_mentioned': 'JavaScript', 'message_length': 41}
+2025-02-12 22:47:39.200 | INFO     | __main__:main:178 - {'message': 'I just tried travel! It was exciting.', 'author': 'Charlie', 'timestamp': '2025-02-12 22:47:39', 'category': 'travel', 'sentiment': 0.16, 'keyword_mentioned': 'travel', 'message_length': 37}
+2025-02-12 22:47:39.201 | INFO     | __main__:main:182 - STEP 4a Wrote message to file: {'message': 'I just tried travel! It was exciting.', 'author': 'Charlie', 'timestamp': '2025-02-12 22:47:39', 'category': 'travel', 'sentiment': 0.16, 'keyword_mentioned': 'travel', 'message_length': 37}
+2025-02-12 22:47:39.202 | INFO     | __main__:main:187 - STEP 4b Sent message to Kafka topic 'buzzline': {'message': 'I just tried travel! It was exciting.', 'author': 'Charlie', 'timestamp': '2025-02-12 22:47:39', 'category': 'travel', 'sentiment': 0.16, 'keyword_mentioned': 'travel', 'message_length': 37}
+2025-02-12 22:47:44.203 | INFO     | __main__:main:178 - {'message': 'I just shared a story! It was boring.', 'author': 'Alice', 'timestamp': '2025-02-12 22:47:44', 'category': 'other', 'sentiment': 0.8, 'keyword_mentioned': 'other', 'message_length': 37}
+2025-02-12 22:47:44.205 | INFO     | __main__:main:182 - STEP 4a Wrote message to file: {'message': 'I just shared a story! It was boring.', 'author': 'Alice', 'timestamp': '2025-02-12 22:47:44', 'category': 'other', 'sentiment': 0.8, 'keyword_mentioned': 'other', 'message_length': 37}
+2025-02-12 22:47:44.215 | INFO     | __main__:main:187 - STEP 4b Sent message to Kafka topic 'buzzline': {'message': 'I just shared a story! It was boring.', 'author': 'Alice', 'timestamp': '2025-02-12 22:47:44', 'category': 'other', 'sentiment': 0.8, 'keyword_mentioned': 'other', 'message_length': 37}
+2025-02-12 22:47:49.217 | INFO     | __main__:main:178 - {'message': 'I just saw a trick! It was weird.', 'author': 'Bob', 'timestamp': '2025-02-12 22:47:49', 'category': 'other', 'sentiment': 0.48, 'keyword_mentioned': 'other', 'message_length': 33}
+2025-02-12 22:47:49.219 | INFO     | __main__:main:182 - STEP 4a Wrote message to file: {'message': 'I just saw a trick! It was weird.', 'author': 'Bob', 'timestamp': '2025-02-12 22:47:49', 'category': 'other', 'sentiment': 0.48, 'keyword_mentioned': 'other', 'message_length': 33}
+2025-02-12 22:47:49.221 | INFO     | __main__:main:187 - STEP 4b Sent message to Kafka topic 'buzzline': {'message': 'I just saw a trick! It was weird.', 'author': 'Bob', 'timestamp': '2025-02-12 22:47:49', 'category': 'other', 'sentiment': 0.48, 'keyword_mentioned': 'other', 'message_length': 33}
+2025-02-12 22:47:54.222 | INFO     | __main__:main:178 - {'message': 'I just loved recipe! It was boring.', 'author': 'Eve', 'timestamp': '2025-02-12 22:47:54', 'category': 'food', 'sentiment': 0.43, 'keyword_mentioned': 'recipe', 'message_length': 35}
+2025-02-12 22:47:54.222 | INFO     | __main__:main:182 - STEP 4a Wrote message to file: {'message': 'I just loved recipe! It was boring.', 'author': 'Eve', 'timestamp': '2025-02-12 22:47:54', 'category': 'food', 'sentiment': 0.43, 'keyword_mentioned': 'recipe', 'message_length': 35}
+2025-02-12 22:47:54.224 | INFO     | __main__:main:187 - STEP 4b Sent message to Kafka topic 'buzzline': {'message': 'I just loved recipe! It was boring.', 'author': 'Eve', 'timestamp': '2025-02-12 22:47:54', 'category': 'food', 'sentiment': 0.43, 'keyword_mentioned': 'recipe', 'message_length': 35}
+2025-02-12 22:47:59.225 | INFO     | __main__:main:178 - {'message': 'I just tried a trick! It was amazing.', 'author': 'Alice', 'timestamp': '2025-02-12 22:47:59', 'category': 'other', 'sentiment': 0.45, 'keyword_mentioned': 'other', 'message_length': 37}
+2025-02-12 22:47:59.226 | INFO     | __main__:main:182 - STEP 4a Wrote message to file: {'message': 'I just tried a trick! It was amazing.', 'author': 'Alice', 'timestamp': '2025-02-12 22:47:59', 'category': 'other', 'sentiment': 0.45, 'keyword_mentioned': 'other', 'message_length': 37}
+2025-02-12 22:47:59.227 | INFO     | __main__:main:187 - STEP 4b Sent message to Kafka topic 'buzzline': {'message': 'I just tried a trick! It was amazing.', 'author': 'Alice', 'timestamp': '2025-02-12 22:47:59', 'category': 'other', 'sentiment': 0.45, 'keyword_mentioned': 'other', 'message_length': 37}
+2025-02-12 22:48:04.229 | INFO     | __main__:main:178 - {'message': 'I just loved JavaScript! It was exciting.', 'author': 'Alice', 'timestamp': '2025-02-12 22:48:04', 'category': 'tech', 'sentiment': 0.5, 'keyword_mentioned': 'JavaScript', 'message_length': 41}
+2025-02-12 22:48:04.230 | INFO     | __main__:main:182 - STEP 4a Wrote message to file: {'message': 'I just loved JavaScript! It was exciting.', 'author': 'Alice', 'timestamp': '2025-02-12 22:48:04', 'category': 'tech', 'sentiment': 0.5, 'keyword_mentioned': 'JavaScript', 'message_length': 41}
+2025-02-12 22:48:04.232 | INFO     | __main__:main:187 - STEP 4b Sent message to Kafka topic 'buzzline': {'message': 'I just loved JavaScript! It was exciting.', 'author': 'Alice', 'timestamp': '2025-02-12 22:48:04', 'category': 'tech', 'sentiment': 0.5, 'keyword_mentioned': 'JavaScript', 'message_length': 41}
+2025-02-12 22:48:09.233 | INFO     | __main__:main:178 - {'message': 'I just tried recipe! It was funny.', 'author': 'Charlie', 'timestamp': '2025-02-12 22:48:09', 'category': 'food', 'sentiment': 0.61, 'keyword_mentioned': 'recipe', 'message_length': 34}
+2025-02-12 22:48:09.235 | INFO     | __main__:main:182 - STEP 4a Wrote message to file: {'message': 'I just tried recipe! It was funny.', 'author': 'Charlie', 'timestamp': '2025-02-12 22:48:09', 'category': 'food', 'sentiment': 0.61, 'keyword_mentioned': 'recipe', 'message_length': 34}
+2025-02-12 22:48:09.237 | INFO     | __main__:main:187 - STEP 4b Sent message to Kafka topic 'buzzline': {'message': 'I just tried recipe! It was funny.', 'author': 'Charlie', 'timestamp': '2025-02-12 22:48:09', 'category': 'food', 'sentiment': 0.61, 'keyword_mentioned': 'recipe', 'message_length': 34}
+2025-02-12 22:48:14.240 | INFO     | __main__:main:178 - {'message': 'I just saw a movie! It was amazing.', 'author': 'Charlie', 'timestamp': '2025-02-12 22:48:14', 'category': 'entertainment', 'sentiment': 0.96, 'keyword_mentioned': 'movie', 'message_length': 35}
+2025-02-12 22:48:14.241 | INFO     | __main__:main:182 - STEP 4a Wrote message to file: {'message': 'I just saw a movie! It was amazing.', 'author': 'Charlie', 'timestamp': '2025-02-12 22:48:14', 'category': 'entertainment', 'sentiment': 0.96, 'keyword_mentioned': 'movie', 'message_length': 35}
+2025-02-12 22:48:14.243 | INFO     | __main__:main:187 - STEP 4b Sent message to Kafka topic 'buzzline': {'message': 'I just saw a movie! It was amazing.', 'author': 'Charlie', 'timestamp': '2025-02-12 22:48:14', 'category': 'entertainment', 'sentiment': 0.96, 'keyword_mentioned': 'movie', 'message_length': 35}
+2025-02-12 22:48:19.245 | INFO     | __main__:main:178 - {'message': 'I just saw recipe! It was funny.', 'author': 'Charlie', 'timestamp': '2025-02-12 22:48:19', 'category': 'food', 'sentiment': 0.03, 'keyword_mentioned': 'recipe', 'message_length': 32}
+2025-02-12 22:48:19.246 | INFO     | __main__:main:182 - STEP 4a Wrote message to file: {'message': 'I just saw recipe! It was funny.', 'author': 'Charlie', 'timestamp': '2025-02-12 22:48:19', 'category': 'food', 'sentiment': 0.03, 'keyword_mentioned': 'recipe', 'message_length': 32}
+2025-02-12 22:48:19.248 | INFO     | __main__:main:187 - STEP 4b Sent message to Kafka topic 'buzzline': {'message': 'I just saw recipe! It was funny.', 'author': 'Charlie', 'timestamp': '2025-02-12 22:48:19', 'category': 'food', 'sentiment': 0.03, 'keyword_mentioned': 'recipe', 'message_length': 32}
+2025-02-12 22:48:24.251 | INFO     | __main__:main:178 - {'message': 'I just saw recipe! It was exciting.', 'author': 'Bob', 'timestamp': '2025-02-12 22:48:24', 'category': 'food', 'sentiment': 0.08, 'keyword_mentioned': 'recipe', 'message_length': 35}
+2025-02-12 22:48:24.253 | INFO     | __main__:main:182 - STEP 4a Wrote message to file: {'message': 'I just saw recipe! It was exciting.', 'author': 'Bob', 'timestamp': '2025-02-12 22:48:24', 'category': 'food', 'sentiment': 0.08, 'keyword_mentioned': 'recipe', 'message_length': 35}
+2025-02-12 22:48:24.254 | INFO     | __main__:main:187 - STEP 4b Sent message to Kafka topic 'buzzline': {'message': 'I just saw recipe! It was exciting.', 'author': 'Bob', 'timestamp': '2025-02-12 22:48:24', 'category': 'food', 'sentiment': 0.08, 'keyword_mentioned': 'recipe', 'message_length': 35}
+2025-02-12 22:48:29.256 | INFO     | __main__:main:178 - {'message': 'I just saw a meme! It was exciting.', 'author': 'Charlie', 'timestamp': '2025-02-12 22:48:29', 'category': 'humor', 'sentiment': 0.51, 'keyword_mentioned': 'meme', 'message_length': 35}
+2025-02-12 22:48:29.258 | INFO     | __main__:main:182 - STEP 4a Wrote message to file: {'message': 'I just saw a meme! It was exciting.', 'author': 'Charlie', 'timestamp': '2025-02-12 22:48:29', 'category': 'humor', 'sentiment': 0.51, 'keyword_mentioned': 'meme', 'message_length': 35}
+2025-02-12 22:48:29.261 | INFO     | __main__:main:187 - STEP 4b Sent message to Kafka topic 'buzzline': {'message': 'I just saw a meme! It was exciting.', 'author': 'Charlie', 'timestamp': '2025-02-12 22:48:29', 'category': 'humor', 'sentiment': 0.51, 'keyword_mentioned': 'meme', 'message_length': 35}
+2025-02-12 22:48:34.263 | INFO     | __main__:main:178 - {'message': 'I just loved travel! It was amazing.', 'author': 'Alice', 'timestamp': '2025-02-12 22:48:34', 'category': 'travel', 'sentiment': 0.34, 'keyword_mentioned': 'travel', 'message_length': 36}
+2025-02-12 22:48:34.265 | INFO     | __main__:main:182 - STEP 4a Wrote message to file: {'message': 'I just loved travel! It was amazing.', 'author': 'Alice', 'timestamp': '2025-02-12 22:48:34', 'category': 'travel', 'sentiment': 0.34, 'keyword_mentioned': 'travel', 'message_length': 36}
+2025-02-12 22:48:34.267 | INFO     | __main__:main:187 - STEP 4b Sent message to Kafka topic 'buzzline': {'message': 'I just loved travel! It was amazing.', 'author': 'Alice', 'timestamp': '2025-02-12 22:48:34', 'category': 'travel', 'sentiment': 0.34, 'keyword_mentioned': 'travel', 'message_length': 36}
+2025-02-12 22:48:39.269 | INFO     | __main__:main:178 - {'message': 'I just shared an app! It was weird.', 'author': 'Bob', 'timestamp': '2025-02-12 22:48:39', 'category': 'other', 'sentiment': 0.61, 'keyword_mentioned': 'other', 'message_length': 35}
+2025-02-12 22:48:39.270 | INFO     | __main__:main:182 - STEP 4a Wrote message to file: {'message': 'I just shared an app! It was weird.', 'author': 'Bob', 'timestamp': '2025-02-12 22:48:39', 'category': 'other', 'sentiment': 0.61, 'keyword_mentioned': 'other', 'message_length': 35}
+2025-02-12 22:48:39.272 | INFO     | __main__:main:187 - STEP 4b Sent message to Kafka topic 'buzzline': {'message': 'I just shared an app! It was weird.', 'author': 'Bob', 'timestamp': '2025-02-12 22:48:39', 'category': 'other', 'sentiment': 0.61, 'keyword_mentioned': 'other', 'message_length': 35}
+2025-02-12 22:48:44.274 | INFO     | __main__:main:178 - {'message': 'I just shared a meme! It was boring.', 'author': 'Charlie', 'timestamp': '2025-02-12 22:48:44', 'category': 'humor', 'sentiment': 0.16, 'keyword_mentioned': 'meme', 'message_length': 36}
+2025-02-12 22:48:44.276 | INFO     | __main__:main:182 - STEP 4a Wrote message to file: {'message': 'I just shared a meme! It was boring.', 'author': 'Charlie', 'timestamp': '2025-02-12 22:48:44', 'category': 'humor', 'sentiment': 0.16, 'keyword_mentioned': 'meme', 'message_length': 36}
+2025-02-12 22:48:44.278 | INFO     | __main__:main:187 - STEP 4b Sent message to Kafka topic 'buzzline': {'message': 'I just shared a meme! It was boring.', 'author': 'Charlie', 'timestamp': '2025-02-12 22:48:44', 'category': 'humor', 'sentiment': 0.16, 'keyword_mentioned': 'meme', 'message_length': 36}
+2025-02-12 22:48:49.280 | INFO     | __main__:main:178 - {'message': 'I just loved a story! It was weird.', 'author': 'Bob', 'timestamp': '2025-02-12 22:48:49', 'category': 'other', 'sentiment': 0.45, 'keyword_mentioned': 'other', 'message_length': 35}
+2025-02-12 22:48:49.282 | INFO     | __main__:main:182 - STEP 4a Wrote message to file: {'message': 'I just loved a story! It was weird.', 'author': 'Bob', 'timestamp': '2025-02-12 22:48:49', 'category': 'other', 'sentiment': 0.45, 'keyword_mentioned': 'other', 'message_length': 35}
+2025-02-12 22:48:49.285 | INFO     | __main__:main:187 - STEP 4b Sent message to Kafka topic 'buzzline': {'message': 'I just loved a story! It was weird.', 'author': 'Bob', 'timestamp': '2025-02-12 22:48:49', 'category': 'other', 'sentiment': 0.45, 'keyword_mentioned': 'other', 'message_length': 35}
+2025-02-12 22:48:54.287 | INFO     | __main__:main:178 - {'message': 'I just shared JavaScript! It was funny.', 'author': 'Eve', 'timestamp': '2025-02-12 22:48:54', 'category': 'tech', 'sentiment': 0.74, 'keyword_mentioned': 'JavaScript', 'message_length': 39}
+2025-02-12 22:48:54.289 | INFO     | __main__:main:182 - STEP 4a Wrote message to file: {'message': 'I just shared JavaScript! It was funny.', 'author': 'Eve', 'timestamp': '2025-02-12 22:48:54', 'category': 'tech', 'sentiment': 0.74, 'keyword_mentioned': 'JavaScript', 'message_length': 39}
+2025-02-12 22:48:54.291 | INFO     | __main__:main:187 - STEP 4b Sent message to Kafka topic 'buzzline': {'message': 'I just shared JavaScript! It was funny.', 'author': 'Eve', 'timestamp': '2025-02-12 22:48:54', 'category': 'tech', 'sentiment': 0.74, 'keyword_mentioned': 'JavaScript', 'message_length': 39}
+2025-02-12 22:48:59.292 | INFO     | __main__:main:178 - {'message': 'I just loved an app! It was funny.', 'author': 'Eve', 'timestamp': '2025-02-12 22:48:59', 'category': 'other', 'sentiment': 0.09, 'keyword_mentioned': 'other', 'message_length': 34}
+2025-02-12 22:48:59.294 | INFO     | __main__:main:182 - STEP 4a Wrote message to file: {'message': 'I just loved an app! It was funny.', 'author': 'Eve', 'timestamp': '2025-02-12 22:48:59', 'category': 'other', 'sentiment': 0.09, 'keyword_mentioned': 'other', 'message_length': 34}
+2025-02-12 22:48:59.297 | INFO     | __main__:main:187 - STEP 4b Sent message to Kafka topic 'buzzline': {'message': 'I just loved an app! It was funny.', 'author': 'Eve', 'timestamp': '2025-02-12 22:48:59', 'category': 'other', 'sentiment': 0.09, 'keyword_mentioned': 'other', 'message_length': 34}
+2025-02-12 22:49:04.299 | INFO     | __main__:main:178 - {'message': 'I just saw a meme! It was exciting.', 'author': 'Eve', 'timestamp': '2025-02-12 22:49:04', 'category': 'humor', 'sentiment': 0.42, 'keyword_mentioned': 'meme', 'message_length': 35}
+2025-02-12 22:49:04.300 | INFO     | __main__:main:182 - STEP 4a Wrote message to file: {'message': 'I just saw a meme! It was exciting.', 'author': 'Eve', 'timestamp': '2025-02-12 22:49:04', 'category': 'humor', 'sentiment': 0.42, 'keyword_mentioned': 'meme', 'message_length': 35}
+2025-02-12 22:49:04.302 | INFO     | __main__:main:187 - STEP 4b Sent message to Kafka topic 'buzzline': {'message': 'I just saw a meme! It was exciting.', 'author': 'Eve', 'timestamp': '2025-02-12 22:49:04', 'category': 'humor', 'sentiment': 0.42, 'keyword_mentioned': 'meme', 'message_length': 35}
+2025-02-12 22:49:09.304 | INFO     | __main__:main:178 - {'message': 'I just shared JavaScript! It was exciting.', 'author': 'Eve', 'timestamp': '2025-02-12 22:49:09', 'category': 'tech', 'sentiment': 0.82, 'keyword_mentioned': 'JavaScript', 'message_length': 42}
+2025-02-12 22:49:09.306 | INFO     | __main__:main:182 - STEP 4a Wrote message to file: {'message': 'I just shared JavaScript! It was exciting.', 'author': 'Eve', 'timestamp': '2025-02-12 22:49:09', 'category': 'tech', 'sentiment': 0.82, 'keyword_mentioned': 'JavaScript', 'message_length': 42}
+2025-02-12 22:49:09.309 | INFO     | __main__:main:187 - STEP 4b Sent message to Kafka topic 'buzzline': {'message': 'I just shared JavaScript! It was exciting.', 'author': 'Eve', 'timestamp': '2025-02-12 22:49:09', 'category': 'tech', 'sentiment': 0.82, 'keyword_mentioned': 'JavaScript', 'message_length': 42}
+2025-02-12 22:49:14.311 | INFO     | __main__:main:178 - {'message': 'I just shared JavaScript! It was funny.', 'author': 'Bob', 'timestamp': '2025-02-12 22:49:14', 'category': 'tech', 'sentiment': 0.61, 'keyword_mentioned': 'JavaScript', 'message_length': 39}
+2025-02-12 22:49:14.313 | INFO     | __main__:main:182 - STEP 4a Wrote message to file: {'message': 'I just shared JavaScript! It was funny.', 'author': 'Bob', 'timestamp': '2025-02-12 22:49:14', 'category': 'tech', 'sentiment': 0.61, 'keyword_mentioned': 'JavaScript', 'message_length': 39}
+2025-02-12 22:49:14.315 | INFO     | __main__:main:187 - STEP 4b Sent message to Kafka topic 'buzzline': {'message': 'I just shared JavaScript! It was funny.', 'author': 'Bob', 'timestamp': '2025-02-12 22:49:14', 'category': 'tech', 'sentiment': 0.61, 'keyword_mentioned': 'JavaScript', 'message_length': 39}
+2025-02-12 22:49:19.317 | INFO     | __main__:main:178 - {'message': 'I just found game! It was boring.', 'author': 'Charlie', 'timestamp': '2025-02-12 22:49:19', 'category': 'gaming', 'sentiment': 0.29, 'keyword_mentioned': 'game', 'message_length': 33}
+2025-02-12 22:49:19.319 | INFO     | __main__:main:182 - STEP 4a Wrote message to file: {'message': 'I just found game! It was boring.', 'author': 'Charlie', 'timestamp': '2025-02-12 22:49:19', 'category': 'gaming', 'sentiment': 0.29, 'keyword_mentioned': 'game', 'message_length': 33}
+2025-02-12 22:49:19.321 | INFO     | __main__:main:187 - STEP 4b Sent message to Kafka topic 'buzzline': {'message': 'I just found game! It was boring.', 'author': 'Charlie', 'timestamp': '2025-02-12 22:49:19', 'category': 'gaming', 'sentiment': 0.29, 'keyword_mentioned': 'game', 'message_length': 33}
+2025-02-12 22:49:24.322 | INFO     | __main__:main:178 - {'message': 'I just saw recipe! It was weird.', 'author': 'Eve', 'timestamp': '2025-02-12 22:49:24', 'category': 'food', 'sentiment': 0.64, 'keyword_mentioned': 'recipe', 'message_length': 32}
+2025-02-12 22:49:24.323 | INFO     | __main__:main:182 - STEP 4a Wrote message to file: {'message': 'I just saw recipe! It was weird.', 'author': 'Eve', 'timestamp': '2025-02-12 22:49:24', 'category': 'food', 'sentiment': 0.64, 'keyword_mentioned': 'recipe', 'message_length': 32}
+2025-02-12 22:49:24.325 | INFO     | __main__:main:187 - STEP 4b Sent message to Kafka topic 'buzzline': {'message': 'I just saw recipe! It was weird.', 'author': 'Eve', 'timestamp': '2025-02-12 22:49:24', 'category': 'food', 'sentiment': 0.64, 'keyword_mentioned': 'recipe', 'message_length': 32}
+2025-02-12 22:49:29.326 | INFO     | __main__:main:178 - {'message': 'I just found a meme! It was exciting.', 'author': 'Eve', 'timestamp': '2025-02-12 22:49:29', 'category': 'humor', 'sentiment': 0.32, 'keyword_mentioned': 'meme', 'message_length': 37}
+2025-02-12 22:49:29.326 | INFO     | __main__:main:182 - STEP 4a Wrote message to file: {'message': 'I just found a meme! It was exciting.', 'author': 'Eve', 'timestamp': '2025-02-12 22:49:29', 'category': 'humor', 'sentiment': 0.32, 'keyword_mentioned': 'meme', 'message_length': 37}
+2025-02-12 22:49:29.327 | INFO     | __main__:main:187 - STEP 4b Sent message to Kafka topic 'buzzline': {'message': 'I just found a meme! It was exciting.', 'author': 'Eve', 'timestamp': '2025-02-12 22:49:29', 'category': 'humor', 'sentiment': 0.32, 'keyword_mentioned': 'meme', 'message_length': 37}
+2025-02-12 22:49:34.329 | INFO     | __main__:main:178 - {'message': 'I just saw a trick! It was weird.', 'author': 'Eve', 'timestamp': '2025-02-12 22:49:34', 'category': 'other', 'sentiment': 0.62, 'keyword_mentioned': 'other', 'message_length': 33}
+2025-02-12 22:49:34.330 | INFO     | __main__:main:182 - STEP 4a Wrote message to file: {'message': 'I just saw a trick! It was weird.', 'author': 'Eve', 'timestamp': '2025-02-12 22:49:34', 'category': 'other', 'sentiment': 0.62, 'keyword_mentioned': 'other', 'message_length': 33}
+2025-02-12 22:49:34.331 | INFO     | __main__:main:187 - STEP 4b Sent message to Kafka topic 'buzzline': {'message': 'I just saw a trick! It was weird.', 'author': 'Eve', 'timestamp': '2025-02-12 22:49:34', 'category': 'other', 'sentiment': 0.62, 'keyword_mentioned': 'other', 'message_length': 33}
+2025-02-12 22:49:39.333 | INFO     | __main__:main:178 - {'message': 'I just tried a story! It was exciting.', 'author': 'Alice', 'timestamp': '2025-02-12 22:49:39', 'category': 'other', 'sentiment': 0.02, 'keyword_mentioned': 'other', 'message_length': 38}
+2025-02-12 22:49:39.334 | INFO     | __main__:main:182 - STEP 4a Wrote message to file: {'message': 'I just tried a story! It was exciting.', 'author': 'Alice', 'timestamp': '2025-02-12 22:49:39', 'category': 'other', 'sentiment': 0.02, 'keyword_mentioned': 'other', 'message_length': 38}
+2025-02-12 22:49:39.337 | INFO     | __main__:main:187 - STEP 4b Sent message to Kafka topic 'buzzline': {'message': 'I just tried a story! It was exciting.', 'author': 'Alice', 'timestamp': '2025-02-12 22:49:39', 'category': 'other', 'sentiment': 0.02, 'keyword_mentioned': 'other', 'message_length': 38}
+2025-02-12 22:49:44.339 | INFO     | __main__:main:178 - {'message': 'I just shared recipe! It was exciting.', 'author': 'Eve', 'timestamp': '2025-02-12 22:49:44', 'category': 'food', 'sentiment': 0.02, 'keyword_mentioned': 'recipe', 'message_length': 38}
+2025-02-12 22:49:44.341 | INFO     | __main__:main:182 - STEP 4a Wrote message to file: {'message': 'I just shared recipe! It was exciting.', 'author': 'Eve', 'timestamp': '2025-02-12 22:49:44', 'category': 'food', 'sentiment': 0.02, 'keyword_mentioned': 'recipe', 'message_length': 38}
+2025-02-12 22:49:44.344 | INFO     | __main__:main:187 - STEP 4b Sent message to Kafka topic 'buzzline': {'message': 'I just shared recipe! It was exciting.', 'author': 'Eve', 'timestamp': '2025-02-12 22:49:44', 'category': 'food', 'sentiment': 0.02, 'keyword_mentioned': 'recipe', 'message_length': 38}
+2025-02-12 22:49:49.346 | INFO     | __main__:main:178 - {'message': 'I just saw a story! It was boring.', 'author': 'Alice', 'timestamp': '2025-02-12 22:49:49', 'category': 'other', 'sentiment': 0.74, 'keyword_mentioned': 'other', 'message_length': 34}
+2025-02-12 22:49:49.348 | INFO     | __main__:main:182 - STEP 4a Wrote message to file: {'message': 'I just saw a story! It was boring.', 'author': 'Alice', 'timestamp': '2025-02-12 22:49:49', 'category': 'other', 'sentiment': 0.74, 'keyword_mentioned': 'other', 'message_length': 34}
+2025-02-12 22:49:49.350 | INFO     | __main__:main:187 - STEP 4b Sent message to Kafka topic 'buzzline': {'message': 'I just saw a story! It was boring.', 'author': 'Alice', 'timestamp': '2025-02-12 22:49:49', 'category': 'other', 'sentiment': 0.74, 'keyword_mentioned': 'other', 'message_length': 34}
+2025-02-12 22:49:54.352 | INFO     | __main__:main:178 - {'message': 'I just shared Python! It was amazing.', 'author': 'Eve', 'timestamp': '2025-02-12 22:49:54', 'category': 'tech', 'sentiment': 0.78, 'keyword_mentioned': 'Python', 'message_length': 37}
+2025-02-12 22:49:54.354 | INFO     | __main__:main:182 - STEP 4a Wrote message to file: {'message': 'I just shared Python! It was amazing.', 'author': 'Eve', 'timestamp': '2025-02-12 22:49:54', 'category': 'tech', 'sentiment': 0.78, 'keyword_mentioned': 'Python', 'message_length': 37}
+2025-02-12 22:49:54.357 | INFO     | __main__:main:187 - STEP 4b Sent message to Kafka topic 'buzzline': {'message': 'I just shared Python! It was amazing.', 'author': 'Eve', 'timestamp': '2025-02-12 22:49:54', 'category': 'tech', 'sentiment': 0.78, 'keyword_mentioned': 'Python', 'message_length': 37}
+2025-02-12 22:49:59.359 | INFO     | __main__:main:178 - {'message': 'I just shared an app! It was funny.', 'author': 'Bob', 'timestamp': '2025-02-12 22:49:59', 'category': 'other', 'sentiment': 0.93, 'keyword_mentioned': 'other', 'message_length': 35}
+2025-02-12 22:49:59.360 | INFO     | __main__:main:182 - STEP 4a Wrote message to file: {'message': 'I just shared an app! It was funny.', 'author': 'Bob', 'timestamp': '2025-02-12 22:49:59', 'category': 'other', 'sentiment': 0.93, 'keyword_mentioned': 'other', 'message_length': 35}
+2025-02-12 22:49:59.363 | INFO     | __main__:main:187 - STEP 4b Sent message to Kafka topic 'buzzline': {'message': 'I just shared an app! It was funny.', 'author': 'Bob', 'timestamp': '2025-02-12 22:49:59', 'category': 'other', 'sentiment': 0.93, 'keyword_mentioned': 'other', 'message_length': 35}
+2025-02-12 22:50:00.027 | WARNING  | __main__:main:192 - WARNING: Producer interrupted by user.
+2025-02-12 22:50:00.028 | INFO     | __main__:main:198 - Kafka producer closed.
+2025-02-12 22:50:00.028 | INFO     | __main__:main:199 - TRY/FINALLY: Producer shutting down.
