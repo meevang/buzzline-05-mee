@@ -83,13 +83,13 @@ Windows:
 
 ```shell
 .venv\Scripts\activate
-py -m producers.producer_mee
+py -m producers.producer_case
 ```
 
 Mac/Linux:
 ```zsh
 source .venv/bin/activate
-python3 -m producers.consumer_mee
+python3 -m producers.producer_case
 ```
 
 The producer will still work if Kafka is not available.
