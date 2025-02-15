@@ -88,6 +88,11 @@ loguru
 # Environment variables management
 python-dotenv
 
+# pip install scipy
+
+# pip install matplotlib
+
+
 # ======================================================
 # KAFKA MESSAGE BROKER INTEGRATION
 # ======================================================

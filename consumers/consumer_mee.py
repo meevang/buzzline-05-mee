@@ -28,162 +28,99 @@ import json
 import pathlib
 import sys
 import time
+import matplotlib.pyplot as plt
+import sqlite3
+from datetime import datetime
+import pathlib
 
 # import from local modules
 import utils.utils_config as config
 from utils.utils_logger import logger
 from .db_sqlite_case import init_db, insert_message
+from scipy import interpolate
+
 
 #####################################
 # Function to process a single message
 # #####################################
 
+def fetch_keyword_data(sqlite_path):
+    conn = sqlite3.connect(sqlite_path)
+    cursor = conn.cursor()
+    
+    # Check if the 'streamed_messages' table exists
+    cursor.execute("SELECT name FROM sqlite_master WHERE type='table' AND name='streamed_messages'")
+    if cursor.fetchone() is None:
+        logger.error("The 'streamed_messages' table does not exist in the database.")
+        conn.close()
+        return []
 
-def process_message(message: str) -> None:
+    query = """
+    SELECT timestamp, keyword_mentioned
+    FROM streamed_messages
+    WHERE keyword_mentioned IS NOT NULL
+    ORDER BY timestamp
     """
-    Process and transform a single JSON message.
-    Converts message fields to appropriate data types.
+    
+    cursor.execute(query)
+    data = cursor.fetchall()
+    
+    conn.close()
+    
+    return data
 
-    Args:
-        message (str): The JSON message as a string.
-    """
-    try:
-        processed_message = {
-            "message": message.get("message"),
-            "author": message.get("author"),
-            "timestamp": message.get("timestamp"),
-            "category": message.get("category"),
-            "sentiment": float(message.get("sentiment", 0.0)),
-            "keyword_mentioned": message.get("keyword_mentioned"),
-            "message_length": int(message.get("message_length", 0)),
-        }
-        logger.info(f"Processed message: {processed_message}")
-        return processed_message
-    except Exception as e:
-        logger.error(f"Error processing message: {e}")
-        return None
-
-
-#####################################
-# Consume Messages from Live Data File
-#####################################
-
-
-def consume_messages_from_file(live_data_path, sql_path, interval_secs, last_position):
-    """
-    Consume new messages from a file and process them.
-    Each message is expected to be JSON-formatted.
-
-    Args:
-    - live_data_path (pathlib.Path): Path to the live data file.
-    - sql_path (pathlib.Path): Path to the SQLite database file.
-    - interval_secs (int): Interval in seconds to check for new messages.
-    - last_position (int): Last read position in the file.
-    """
-    logger.info("Called consume_messages_from_file() with:")
-    logger.info(f"   {live_data_path=}")
-    logger.info(f"   {sql_path=}")
-    logger.info(f"   {interval_secs=}")
-    logger.info(f"   {last_position=}")
-
-    logger.info("1. Initialize the database.")
-    init_db(sql_path)
-
-    logger.info("2. Set the last position to 0 to start at the beginning of the file.")
-    last_position = 0
-
-    while True:
-        try:
-            logger.info(f"3. Read from live data file at position {last_position}.")
-            with open(live_data_path, "r") as file:
-                # Move to the last read position
-                file.seek(last_position)
-                for line in file:
-                    # If we strip whitespace and there is content
-                    if line.strip():
-
-                        # Use json.loads to parse the stripped line
-                        message = json.loads(line.strip())
-
-                        # Call our process_message function
-                        processed_message = process_message(message)
-
-                        # If we have a processed message, insert it into the database
-                        if processed_message:
-                            insert_message(processed_message, sql_path)
-
-                # Update the last position that's been read to the current file position
-                last_position = file.tell()
-
-                # Return the last position to be used in the next iteration
-                return last_position
-
-        except FileNotFoundError:
-            logger.error(f"ERROR: Live data file not found at {live_data_path}.")
-            sys.exit(10)
-        except Exception as e:
-            logger.error(f"ERROR: Error reading from live data file: {e}")
-            sys.exit(11)
-
-        time.sleep(interval_secs)
-
-
-#####################################
-# Define Main Function
-#####################################
+def plot_keyword_chart(data):
+    keywords = {}
+    timestamps = []
+    
+    for timestamp_str, keyword in data:
+        timestamp = datetime.strptime(timestamp_str, "%Y-%m-%d %H:%M:%S")
+        timestamps.append(timestamp)
+        
+        if keyword not in keywords:
+            keywords[keyword] = [0] * len(timestamps)
+        else:
+            # Extend the list if necessary
+            keywords[keyword].extend([0] * (len(timestamps) - len(keywords[keyword])))
+        
+        keywords[keyword][-1] += 1
+    
+    plt.figure(figsize=(12, 6))
+    
+    for keyword, counts in keywords.items():
+        # Use cumulative sum for a running total
+        cumulative_counts = [sum(counts[:i+1]) for i in range(len(counts))]
+        min_length = min(len(timestamps), len(cumulative_counts))
+        plt.plot(timestamps[:min_length], cumulative_counts[:min_length], label=keyword, marker='o')
+    
+    plt.title("Cumulative Keyword Mentions Over Time")
+    plt.xlabel("Timestamp")
+    plt.ylabel("Cumulative Keyword Count")
+    plt.legend()
+    plt.grid(True)
+    
+    plt.tight_layout()
+    plt.show()
 
 
 def main():
-    """
-    Main function to run the consumer process.
-
-    Reads configuration, initializes the database, and starts consumption.
-
-    """
-    logger.info("Starting Consumer to run continuously.")
-    logger.info("Things can fail or get interrupted, so use a try block.")
-    logger.info("Moved .env variables into a utils config module.")
-
-    logger.info("STEP 1. Read environment variables using new config functions.")
+    logger.info("Starting Keyword Tracker")
+    
     try:
-        interval_secs: int = config.get_message_interval_seconds_as_int()
-        live_data_path: pathlib.Path = config.get_live_data_path()
-        sqlite_path: pathlib.Path = config.get_sqlite_path()
-        logger.info("SUCCESS: Read environment variables.")
+        sqlite_path = config.get_sqlite_path()
+        logger.info(f"Using SQLite database at: {sqlite_path}")
+        
+        data = fetch_keyword_data(sqlite_path)
+        logger.info(f"Fetched {len(data)} data points")
+        
+        if data:
+            plot_keyword_chart(data)
+            logger.info("Successfully plotted keyword chart")
+        else:
+            logger.warning("No keyword data found in the database")
+    
     except Exception as e:
-        logger.error(f"ERROR: Failed to read environment variables: {e}")
-        sys.exit(1)
-
-    logger.info("STEP 2. Delete any prior database file for a fresh start.")
-    if sqlite_path.exists():
-        try:
-            sqlite_path.unlink()
-            logger.info("SUCCESS: Deleted database file.")
-        except Exception as e:
-            logger.error(f"ERROR: Failed to delete DB file: {e}")
-            sys.exit(2)
-
-    logger.info("STEP 3. Initialize a new database with an empty table.")
-    try:
-        init_db(sqlite_path)
-    except Exception as e:
-        logger.error(f"ERROR: Failed to create db table: {e}")
-        sys.exit(3)
-
-    logger.info("STEP 4. Begin consuming and storing messages.")
-    try:
-        consume_messages_from_file(live_data_path, sqlite_path, interval_secs, 0)
-    except KeyboardInterrupt:
-        logger.warning("Consumer interrupted by user.")
-    except Exception as e:
-        logger.error(f"ERROR: Unexpected error: {e}")
-    finally:
-        logger.info("TRY/FINALLY: Consumer shutting down.")
-
-
-#####################################
-# Conditional Execution
-#####################################
+        logger.error(f"Error in Keyword Tracker: {e}")
 
 if __name__ == "__main__":
     main()
