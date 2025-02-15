@@ -1,9 +1,20 @@
-# buzzline-05-case
+# buzzline-05-mee
 
 Nearly every streaming analytics system stores processed data somewhere for further analysis, historical reference, or integration with BI tools.
 
-In this example project, we incorporate a relational data store. 
-We use SQLite, but the example could be altered to work with MySQL, PostgreSQL, or MongoDB.
+This consumer is to process JSON messages from a live data file and visualize keyword trends.
+1. Data Source: It consumes JSON messages from a live data file. Each message contains information about social media posts, including the message content, author, timestamp, category, sentiment, keyword mentioned, and message length.
+2. Data Storage: The processed messages are inserted into a SQLite database. The database functions are imported from 'consumers/db_sqlite_case.py'.
+3. Configuration: Environment variables are managed through the 'utils/utils_config' module.
+4. Data Retrieval: The fetch_keyword_data function connects to the SQLite database and retrieves timestamp and keyword data from the 'streamed_messages' table.
+5. Data Visualization: The plot_keyword_chart function creates a line chart showing the cumulative mentions of keywords over time. It uses matplotlib for plotting.
+6. Min Execution:
+    •	Retrieves the SQLite database path from the configuration.
+    •	Fetches keyword data from the database.
+    •	If data is available, it plots the keyword chart.
+    •	Logs the process steps and any errors encountered.
+7. Error Handling: The script includes error handling to log any exceptions that occur during execution.
+
 
 ## VS Code Extensions
 
@@ -78,7 +89,7 @@ py -m producers.producer_case
 Mac/Linux:
 ```zsh
 source .venv/bin/activate
-python3 -m producers.producer_case
+python3 -m producers.consumer_mee
 ```
 
 The producer will still work if Kafka is not available.
@@ -96,17 +107,13 @@ Use the commands below to activate .venv, and start the consumer.
 Windows:
 ```shell
 .venv\Scripts\activate
-py -m consumers.kafka_consumer_case
-OR
-py -m consumers.file_consumer_case
-```
+py -m consumers.consumer_mee
+
 
 Mac/Linux:
 ```zsh
 source .venv/bin/activate
-python3 -m consumers.kafka_consumer_case
-OR
-python3 -m consumers.file_consumer_case
+python3 -m consumers.consumer_mee
 ```
 
 ---
