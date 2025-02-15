@@ -11315,3 +11315,10 @@ ine': {'message': 'I just found travel! It was exciting.', 'author': 'Bob', 'tim
 2025-02-14 18:26:28.789 | WARNING  | __main__:main:192 - WARNING: Producer interrupted by user.
 2025-02-14 18:26:28.791 | INFO     | __main__:main:198 - Kafka producer closed.
 2025-02-14 18:26:28.791 | INFO     | __main__:main:199 - TRY/FINALLY: Producer shutting down.
+2025-02-14 19:40:08.679 | INFO     | utils.utils_logger:<module>:43 - Logging to file: logs\project_log.log
+2025-02-14 19:40:13.233 | INFO     | __main__:main:107 - Starting Keyword Tracker
+2025-02-14 19:40:13.233 | INFO     | utils.utils_config:get_base_data_path:80 - BASE_DATA_DIR: C:\Users\mvang\Streaming_Data_Projects\buzzline-05-mee\data
+2025-02-14 19:40:13.234 | INFO     | utils.utils_config:get_sqlite_path:96 - SQLITE_PATH: C:\Users\mvang\Streaming_Data_Projects\buzzline-05-mee\data\buzz.sqlite
+2025-02-14 19:40:13.234 | INFO     | __main__:main:111 - Using SQLite database at: C:\Users\mvang\Streaming_Data_Projects\buzzline-05-mee\data\buzz.sqlite
+2025-02-14 19:40:13.235 | INFO     | __main__:main:114 - Fetched 874 data points
+2025-02-14 19:40:16.895 | INFO     | __main__:main:118 - Successfully plotted keyword chart
